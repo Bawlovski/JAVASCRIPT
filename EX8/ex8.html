@@ -5,30 +5,48 @@
     <meta charset="UTF-8">
     <title>EX8</title>
     <style>
-        #main {
-            height: 500px;
-            width: 500px;
+        * {
+            text-align: center;
         }
+        
+        #main {
+            height: 30em;
+            width: 30em;
+        }
+   
         button {
-            height: 100px;
-            width: 100px;
+            padding-top: 6%;
+            height: 7em;
+            width: 7em;
+        }
+        #mainroot {
+            padding: 5%;
         }
         div img {
-            height: 100px;
-            width: 100px;
+            height: 7em;
+            width: 7em;
         }
+
+        body {
+            background-color: #edc9f0;
+        }
+
     </style>
 </head>
 
-<body>
-    <img id="main" src="wisp1.jpg">
-    <div>
-        <button onclick="changeBackward()">←</button>
-        <img id="1" src="wisp1.jpg">
-        <img id="2" src="wisp2.jpg">
-        <img id="3" src="wisp3.jpg">
-        <button onclick="changeForward()">→</button>
+<body onload="loadCustom()">
+    <div id="mainroot">
+        <img id="main">
+        <div>
+            <img src="bl.svg"  onclick="changeBackward()"></img>
+            <img onclick="clicked(this)" id="1" src="wisp1.jpg">
+            <img onclick="clicked(this)" id="2" src="wisp2.jpg">
+            <img onclick="clicked(this)" id="3" src="wisp3.jpg">
+            
+            <img src="br.svg" onclick="changeForward()"></img>
+        </div>
     </div>
-    <script src="ex8.js"></script>
+    <script src="ex8.js">
+    </script>
 </body>
 </html>
